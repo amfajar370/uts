@@ -1,0 +1,303 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe2670c6e, pid=6348, tid=9224
+#
+# JRE version:  (20.0.1+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0.1+9-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x310c6e]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.gradle.appname=gradlew org.gradle.wrapper.GradleWrapperMain -q -Ptarget-platform=android-arm64 -Ptarget=C:\Users\adiks\uts\lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+
+Host: AMD Ryzen 3 3250U with Radeon Graphics         , 4 cores, 5G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+Time: Mon May 15 18:27:36 2023 SE Asia Standard Time elapsed time: 0.117001 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ecbc2d0320):  JavaThread "Unknown thread" [_thread_in_vm, id=9224, stack(0x000000d3d3100000,0x000000d3d3200000)]
+
+Stack: [0x000000d3d3100000,0x000000d3d3200000],  sp=0x000000d3d31ff110,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x310c6e]
+V  [jvm.dll+0x31155d]
+V  [jvm.dll+0x6669eb]
+V  [jvm.dll+0x666c0e]
+V  [jvm.dll+0x66608b]
+V  [jvm.dll+0x661536]
+V  [jvm.dll+0x8112f8]
+V  [jvm.dll+0x3c0d91]
+V  [jvm.dll+0x7fcfe3]
+V  [jvm.dll+0x44c76f]
+V  [jvm.dll+0x44e0e1]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000cd8c211d5897, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x00007fffe2cdb101
+RSP=0x000000d3d31ff110, RBP=0x0000000000000001, RSI=0x0000000800b074e0, RDI=0x0000000000000000
+R8 =0x0000000000000001, R9 =0x0000000000000001, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x0000000000000001, R13=0x000001ecbc128710, R14=0x0000000000000001, R15=0x0000000800000000
+RIP=0x00007fffe2670c6e, EFLAGS=0x0000000000010246
+
+
+Top of Stack: (sp=0x000000d3d31ff110)
+0x000000d3d31ff110:   000000d3d31ff140 000001ecd16f50a0
+0x000000d3d31ff120:   0000000000000418 0000000000000000
+0x000000d3d31ff130:   0000cd8c211d59f7 00007ff812f1ba4e
+0x000000d3d31ff140:   0000000000010000 0000000000c60000
+0x000000d3d31ff150:   0000cd8c211d5907 00007fffe266efdf
+0x000000d3d31ff160:   0000cd8c211d5897 000001ecbc397230
+0x000000d3d31ff170:   0000000000000000 00007fffe267155d
+0x000000d3d31ff180:   00000000007e0000 0000000000000000
+0x000000d3d31ff190:   000001ecbc397230 0000000000000000
+0x000000d3d31ff1a0:   0000000000000002 0000000000000000
+0x000000d3d31ff1b0:   0000000800b074d8 0000000000000001
+0x000000d3d31ff1c0:   000000d3d31ff398 000000d3d31ff238
+0x000000d3d31ff1d0:   0000000000000000 0000000000000000
+0x000000d3d31ff1e0:   0000000801000000 00007ff81344f000
+0x000000d3d31ff1f0:   0000cd8c211d5807 0000000000000000
+0x000000d3d31ff200:   0000000000000000 0000000000000000
+0x000000d3d31ff210:   000001ecbc397230 000000d3d31ff3b0
+0x000000d3d31ff220:   000001ecbc397230 00007fffe29c69eb
+0x000000d3d31ff230:   000001ecbc128710 00007fffe2eb02b0
+0x000000d3d31ff240:   000001ecbc397230 0000000800000000
+0x000000d3d31ff250:   000000d3d31ff260 000000d3d31ff3b0
+0x000000d3d31ff260:   0000000000000000 0000000000000000
+0x000000d3d31ff270:   0000000000000000 0000000000000000
+0x000000d3d31ff280:   0000000000000000 ffffffffbc397200
+0x000000d3d31ff290:   0000000000000000 000001ecbc397230
+0x000000d3d31ff2a0:   0000000000000000 00007fffe29c6c0e
+0x000000d3d31ff2b0:   0000000000000001 0000000801000000
+0x000000d3d31ff2c0:   646e697720726f66 36646d612d73776f
+0x000000d3d31ff2d0:   000000d3d31ff2e0 000000d3d31ff360
+0x000000d3d31ff2e0:   0000000000000000 0000000000000000
+0x000000d3d31ff2f0:   0000000000000000 0000000000000000
+0x000000d3d31ff300:   0000000000000000 ffffffffbc397200 
+
+Instructions: (pc=0x00007fffe2670c6e)
+0x00007fffe2670b6e:   85 66 00 e8 da ff f6 ff 48 8b 0d b3 f5 88 00 48
+0x00007fffe2670b7e:   85 c9 74 22 44 0f b6 83 b1 02 00 00 48 8d 0d 7f
+0x00007fffe2670b8e:   b8 66 00 0f b6 93 b0 02 00 00 e8 d3 d4 da ff 48
+0x00007fffe2670b9e:   8b 0d 8c f5 88 00 0f b6 05 2f fc 89 00 38 83 b0
+0x00007fffe2670bae:   02 00 00 75 60 0f b6 05 21 fc 89 00 38 83 b1 02
+0x00007fffe2670bbe:   00 00 75 51 80 bb 09 04 00 00 00 75 1f c6 05 8e
+0x00007fffe2670bce:   f6 83 00 00 48 85 c9 74 13 48 8d 0d 32 b9 66 00
+0x00007fffe2670bde:   e8 8d d4 da ff 48 8b 0d 46 f5 88 00 80 bb 0a 04
+0x00007fffe2670bee:   00 00 00 75 18 c6 05 67 f6 83 00 00 48 85 c9 74
+0x00007fffe2670bfe:   0c 48 8d 0d 7a b9 66 00 e8 65 d4 da ff b0 01 48
+0x00007fffe2670c0e:   83 c4 20 5b c3 48 8d 0d 56 b8 66 00 e8 71 d0 ff
+0x00007fffe2670c1e:   ff 32 c0 48 83 c4 20 5b c3 cc cc cc cc cc cc cc
+0x00007fffe2670c2e:   cc cc 48 89 5c 24 10 48 89 6c 24 18 48 89 74 24
+0x00007fffe2670c3e:   20 57 48 83 ec 60 48 8b 05 35 32 86 00 48 33 c4
+0x00007fffe2670c4e:   48 89 44 24 50 80 3d 36 35 83 00 00 0f b6 ea 48
+0x00007fffe2670c5e:   8b f1 74 17 80 39 00 75 12 48 8b 0d c2 49 89 00
+0x00007fffe2670c6e:   48 8b 01 ff 50 20 48 8b d8 eb 08 48 8b 59 18 48
+0x00007fffe2670c7e:   83 c3 04 48 83 3d a7 4a 89 00 00 40 b7 01 74 0f
+0x00007fffe2670c8e:   48 8b d3 48 8d 0d 90 a0 66 00 e8 13 02 f1 ff 48
+0x00007fffe2670c9e:   8d 54 24 20 48 8b cb e8 86 96 3a 00 85 c0 74 1c
+0x00007fffe2670cae:   40 84 ed 74 17 48 8b d3 48 8d 0d 93 a0 66 00 e8
+0x00007fffe2670cbe:   ce cf ff ff 40 32 ff e9 ec 00 00 00 80 3e 03 75
+0x00007fffe2670cce:   27 48 8b cb e8 c9 3a 3a 00 84 c0 0f 85 d7 00 00
+0x00007fffe2670cde:   00 48 8b d3 48 8d 0d 97 a0 66 00 e8 a2 cf ff ff
+0x00007fffe2670cee:   40 32 ff e9 c0 00 00 00 48 8b 56 08 4c 8b 44 24
+0x00007fffe2670cfe:   40 48 85 d2 74 05 49 3b d0 75 0f 48 63 44 24 34
+0x00007fffe2670d0e:   48 39 46 10 0f 84 9e 00 00 00 40 32 ff 40 38 3d
+0x00007fffe2670d1e:   a5 fa 89 00 74 1c 49 3b d0 48 8d 05 72 a0 66 00
+0x00007fffe2670d2e:   48 8d 0d 83 a0 66 00 48 0f 45 c8 e8 52 cf ff ff
+0x00007fffe2670d3e:   eb 76 4c 8b c3 48 8d 15 86 a0 66 00 48 8d 0d c7
+0x00007fffe2670d4e:   d6 62 00 e8 3a cf ff ff 48 83 3d d2 f3 88 00 00
+0x00007fffe2670d5e:   4c 8b 05 d3 f3 88 00 75 22 4d 85 c0 74 1d 4c 8b 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fffe2eba098, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001ecbc321200 WorkerThread "GC Thread#0" [stack: 0x000000d3d3200000,0x000000d3d3300000] [id=12628]
+  0x000001ecbc32f7f0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d3d3300000,0x000000d3d3400000] [id=5976]
+  0x000001ecbc330130 WorkerThread "G1 Conc#0" [stack: 0x000000d3d3400000,0x000000d3d3500000] [id=4400]
+  0x000001ecbc39a6e0 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000d3d3500000,0x000000d3d3600000] [id=3100]
+  0x000001ecbc39b090 ConcurrentGCThread "G1 Service" [stack: 0x000000d3d3600000,0x000000d3d3700000] [id=7512]
+
+=>0x000001ecbc2d0320 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9224, stack(0x000000d3d3100000,0x000000d3d3200000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000a0c00000, size: 1524 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+ CPUs: 4 total, 4 available
+ Memory: 6094M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 96M
+ Heap Max Capacity: 1524M
+ Pre-touch: Disabled
+ Parallel Workers: 4
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 4
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 98304K, used 0K [0x00000000a0c00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe2a73c59]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.037 Loaded shared library C:\Program Files\Java\jdk-20\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff725030000 - 0x00007ff725040000 	C:\Program Files\Java\jdk-20\bin\java.exe
+0x00007ff815550000 - 0x00007ff815748000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff813ab0000 - 0x00007ff813b6f000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff812eb0000 - 0x00007ff8131a6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff813440000 - 0x00007ff813540000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffffb8b0000 - 0x00007ffffb8c9000 	C:\Program Files\Java\jdk-20\bin\jli.dll
+0x00007ff814430000 - 0x00007ff8144df000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8139b0000 - 0x00007ff813a4e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff814090000 - 0x00007ff81412c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8151d0000 - 0x00007ff8152f6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff815370000 - 0x00007ff81550d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8131b0000 - 0x00007ff8131d2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8136b0000 - 0x00007ff8136dc000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8131e0000 - 0x00007ff8132f5000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff812e10000 - 0x00007ff812ead000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffff580000 - 0x00007fffff81a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff808ee0000 - 0x00007ff808eea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffff5400000 - 0x00007ffff541b000 	C:\Program Files\Java\jdk-20\bin\VCRUNTIME140.dll
+0x00007ff813680000 - 0x00007ff8136b0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffffb8a0000 - 0x00007ffffb8ac000 	C:\Program Files\Java\jdk-20\bin\vcruntime140_1.dll
+0x00007fffe8650000 - 0x00007fffe86de000 	C:\Program Files\Java\jdk-20\bin\msvcp140.dll
+0x00007fffe2360000 - 0x00007fffe2ff7000 	C:\Program Files\Java\jdk-20\bin\server\jvm.dll
+0x00007ff808eb0000 - 0x00007ff808ed7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffffb010000 - 0x00007ffffb019000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff815300000 - 0x00007ff81536b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff811480000 - 0x00007ff811492000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffffa1f0000 - 0x00007ffffa1fa000 	C:\Program Files\Java\jdk-20\bin\jimage.dll
+0x00007ff811060000 - 0x00007ff811244000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff804e30000 - 0x00007ff804e64000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8133b0000 - 0x00007ff813432000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffff53d0000 - 0x00007ffff53f6000 	C:\Program Files\Java\jdk-20\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-20\bin\server
+
+VM Arguments:
+jvm_args: -Dorg.gradle.appname=gradlew 
+java_command: org.gradle.wrapper.GradleWrapperMain -q -Ptarget-platform=android-arm64 -Ptarget=C:\Users\adiks\uts\lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+java_class_path (initial): C:\Users\adiks\uts\android\\gradle\wrapper\gradle-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 100663296                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1598029824                                {product} {ergonomic}
+   size_t MaxNewSize                               = 958398464                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1598029824                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-20
+CLASSPATH=C:\Users\adiks\uts\android\\gradle\wrapper\gradle-wrapper.jar
+PATH=C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Python\Python311;C:\Users\adiks\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\adiks\AppData\Local\Programs\Python\Python311\;C:\Users\adiks\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2022.3.2\bin;C:\Users\adiks\Documents\flutter\flutter_windows_3.7.6-stable\flutter\bin;C:\Users\adiks\Documents\flutter\flutter_windows_3.7.6-stable\flutter\bin;C:\Users\adiks\Documents\flutter\flutter_windows_3.7.6-stable\flutter\bin;C:\Users\adiks\AppData\Local\gitkraken\bin;C:\Users\adiks\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\adiks\Documents\flutter\flutter_windows_3.7.6-stable\flutter\bin\mingit\cmd
+USERNAME=adiks
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+TMP=C:\Users\adiks\AppData\Local\Temp
+TEMP=C:\Users\adiks\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+OS uptime: 0 days 12:32 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, f16c
+
+Memory: 4k page, system-wide physical 6094M (2147M free)
+TotalPageFile size 14798M (AvailPageFile size 7278M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 162M, peak: 162M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.0.1+9-29) for windows-amd64 JRE (20.0.1+9-29), built on 2023-03-07T13:56:11Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
